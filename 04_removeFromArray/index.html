@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function removeFromArray(array,...numbers){
+    //loop starting at initial numbers position and looping until end
+  for(let i=0;i<numbers.length;i++){
+    //function to check each element in array, return when true
+    function findNumber(x){
+      return x===numbers[i]
+    }
+    
+    //finds actual index in array when findNumber is true
+    let index=array.findIndex(findNumber)
+    console.log(index)
+    //remove value from array at index
+    if(index>=0)array.splice(index,1);
+  }console.log(array)
+}
+removeFromArray([1,2,3,4],"2",1)
+   
+   
+    </script>
+</body>
+</html>
